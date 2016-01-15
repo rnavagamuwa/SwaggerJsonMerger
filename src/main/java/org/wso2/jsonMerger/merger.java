@@ -20,7 +20,7 @@ public class merger {
 		Map<String, Model> definitions = null;
 		Map<String, Model> tempDefinitions;
 		
-		for(int i=1;i<=swaggerCount;i++){
+		for(int i=1;i<swaggerCount;i++){
 			Swagger temp = new SwaggerParser().read(i+".json");
 
 			paths = initial.getPaths();
