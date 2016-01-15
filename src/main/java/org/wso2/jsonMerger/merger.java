@@ -13,15 +13,15 @@ import com.wordnik.swagger.models.Swagger;
 import io.swagger.parser.SwaggerParser;
 
 public class merger {
-	public static void merge(int swaggerCount) {
-		Swagger initial = new SwaggerParser().read("0.json");
+	public static void merge(String basePath, int swaggerCount) {
+		Swagger initial = new SwaggerParser().read(basePath + "0.json");
 		Map<String, Path> paths = null;
 		Map<String, Path> tempPaths;
 		Map<String, Model> definitions = null;
 		Map<String, Model> tempDefinitions;
 		
 		for(int i=1;i<swaggerCount;i++){
-			Swagger temp = new SwaggerParser().read(i+".json");
+			Swagger temp = new SwaggerParser().read(basePath+i+".json");
 
 			paths = initial.getPaths();
 			tempPaths = temp.getPaths();
