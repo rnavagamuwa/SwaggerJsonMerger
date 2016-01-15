@@ -7,9 +7,9 @@ import java.util.Map;
 import java.util.Map.Entry;
 
 import com.google.gson.Gson;
-import com.wordnik.swagger.models.Model;
-import com.wordnik.swagger.models.Path;
-import com.wordnik.swagger.models.Swagger;
+import io.swagger.models.Path;
+import io.swagger.models.Model;
+import io.swagger.models.Swagger;
 
 import io.swagger.parser.SwaggerParser;
 
@@ -24,17 +24,18 @@ public class merger {
 			Map<String, Path> tempPaths;
 			Map<String, Model> definitions = null;
 			Map<String, Model> tempDefinitions;
-
+			paths = initial.getPaths();
+			definitions = initial.getDefinitions();
 			for (int i = 1; i < swaggerCount; i++) {
 				Swagger temp = new SwaggerParser().read("inputSwagger/" + i + ".json");
 
-				paths = initial.getPaths();
+				
 				tempPaths = temp.getPaths();
 				for (Entry<String, Path> entryPath : tempPaths.entrySet()) {
 					paths.put(entryPath.getKey(), entryPath.getValue());
 				}
 
-				definitions = initial.getDefinitions();
+				
 				tempDefinitions = temp.getDefinitions();
 				for (Entry<String, Model> entryDef : tempDefinitions.entrySet()) {
 					definitions.put(entryDef.getKey(), entryDef.getValue());

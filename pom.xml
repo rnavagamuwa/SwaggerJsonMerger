@@ -5,7 +5,7 @@
 	<groupId>org.wso2</groupId>
 	<artifactId>jsonMerger</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<packaging>pom</packaging>
 
 	<name>jsonMerger</name>
 	<url>http://maven.apache.org</url>
@@ -28,13 +28,8 @@
 		</dependency>
 		<dependency>
 			<groupId>io.swagger</groupId>
-			<artifactId>swagger-parser</artifactId>
-			<version>1.0.0</version>
-		</dependency>
-		<dependency>
-			<groupId>io.swagger</groupId>
-			<artifactId>swagger-models</artifactId>
-			<version>1.5.3</version>
+			<artifactId>swagger-parser-custom</artifactId>
+			<version>10</version>
 		</dependency>
 		<dependency>
 			<groupId>org.slf4j</groupId>
@@ -42,4 +37,8 @@
 			<version>1.7.13</version>
 		</dependency>
 	</dependencies>
+	 <modules>
+        <module>modules/swagger-parser</module>
+        <module>modules/swagger-compat-spec-parser</module>
+    </modules>
 </project>
