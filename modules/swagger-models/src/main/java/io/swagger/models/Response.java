@@ -13,7 +13,7 @@ public class Response {
     private Property schema;
     private Map<String, Object> examples;
     private Map<String, Property> headers;
-    private final Map<String, Object> vendorExtensions = new HashMap<String, Object>();
+    private transient final Map<String, Object> vendorExtensions = new HashMap<String, Object>();
 
     public Response schema(Property property) {
         this.setSchema(property);
