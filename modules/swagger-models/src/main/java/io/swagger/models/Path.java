@@ -11,7 +11,7 @@ import java.util.Map;
 @JsonPropertyOrder({"get", "head", "post", "put", "delete", "options", "patch"})
 public class Path {
 
-    private final Map<String, Object> vendorExtensions = new HashMap<String, Object>();
+    private transient final Map<String, Object> vendorExtensions = new HashMap<String, Object>();
     private Operation get;
     private Operation put;
     private Operation post;
