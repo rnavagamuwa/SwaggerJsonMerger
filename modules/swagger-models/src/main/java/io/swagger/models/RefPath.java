@@ -18,7 +18,8 @@ import java.util.Map;
  */
 public class RefPath extends Path {
 
-    private GenericRef genericRef;
+    private transient GenericRef genericRef;
+    private String $ref;
 
     public RefPath() {
     }
@@ -29,6 +30,7 @@ public class RefPath extends Path {
 
     public void set$ref(String ref) {
         this.genericRef = new GenericRef(RefType.PATH, ref);
+        this.$ref = genericRef.getRef();
     }
 
     public String get$ref() {

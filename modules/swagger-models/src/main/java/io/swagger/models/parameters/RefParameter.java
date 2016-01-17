@@ -6,7 +6,8 @@ import io.swagger.models.refs.RefFormat;
 import io.swagger.models.refs.RefType;
 
 public class RefParameter extends AbstractParameter implements Parameter {
-    private GenericRef genericRef;
+    private transient GenericRef genericRef;
+    private String $ref;
 
     public RefParameter(String ref) {
         set$ref(ref);
@@ -36,6 +37,7 @@ public class RefParameter extends AbstractParameter implements Parameter {
 
     public void set$ref(String ref) {
         this.genericRef = new GenericRef(RefType.PARAMETER, ref);
+        this.$ref = genericRef.getRef();
     }
 
     @JsonIgnore

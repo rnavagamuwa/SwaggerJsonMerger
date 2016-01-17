@@ -7,7 +7,8 @@ import io.swagger.models.refs.RefType;
 
 public class RefProperty extends AbstractProperty implements Property {
     private static final String TYPE = "ref";
-    private GenericRef genericRef;
+    private transient GenericRef genericRef;
+    private String $ref;
 
     public RefProperty() {
         setType(TYPE);
@@ -54,6 +55,7 @@ public class RefProperty extends AbstractProperty implements Property {
 
     public void set$ref(String ref) {
         this.genericRef = new GenericRef(RefType.DEFINITION, ref);
+        this.$ref = genericRef.getRef();
     }
 
     @JsonIgnore

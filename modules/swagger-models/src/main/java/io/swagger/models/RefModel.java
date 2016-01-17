@@ -9,12 +9,13 @@ import io.swagger.models.refs.RefType;
 import java.util.Map;
 
 public class RefModel implements Model {
-    private GenericRef genericRef;
+    private transient GenericRef genericRef;
     private String description;
     private ExternalDocs externalDocs;
     private Map<String, Property> properties;
     private Object example;
     private String title;
+    private String $ref;
 
     public RefModel() {
     }
@@ -70,6 +71,7 @@ public class RefModel implements Model {
 
     public void set$ref(String ref) {
         this.genericRef = new GenericRef(RefType.DEFINITION, ref);
+        this.$ref = genericRef.getRef();
     }
 
     @JsonIgnore

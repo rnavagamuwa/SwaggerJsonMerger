@@ -17,7 +17,8 @@ import java.util.Map;
  */
 public class RefResponse extends Response {
 
-    private GenericRef genericRef;
+    private transient GenericRef genericRef;
+    private String $ref;
 
     public RefResponse() {
     }
@@ -28,6 +29,7 @@ public class RefResponse extends Response {
 
     public void set$ref(String ref) {
         this.genericRef = new GenericRef(RefType.RESPONSE, ref);
+        this.$ref = genericRef.getRef();
     }
 
     public String get$ref() {
