@@ -11,7 +11,7 @@ public abstract class AbstractModel implements Model {
     private ExternalDocs externalDocs;
     private String reference;
     private String title;
-    private final Map<String, Object> vendorExtensions = new HashMap<String, Object>();
+    private transient final Map<String, Object> vendorExtensions = new HashMap<String, Object>();
 
     @Override
     public ExternalDocs getExternalDocs() {

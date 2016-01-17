@@ -9,7 +9,7 @@ import java.util.Map;
 
 public abstract class AbstractSecuritySchemeDefinition implements SecuritySchemeDefinition {
 
-    private final Map<String, Object> vendorExtensions = new HashMap<String, Object>();
+    private transient final Map<String, Object> vendorExtensions = new HashMap<String, Object>();
 
     private String description;
 

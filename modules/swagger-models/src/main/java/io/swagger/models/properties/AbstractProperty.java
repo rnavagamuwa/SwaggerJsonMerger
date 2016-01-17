@@ -19,7 +19,7 @@ public abstract class AbstractProperty implements Property {
     String title;
     Boolean readOnly;
     private String access;
-    private final Map<String, Object> vendorExtensions = new HashMap<String, Object>();
+    private transient final Map<String, Object> vendorExtensions = new HashMap<String, Object>();
 
     public Property title(String title) {
         this.setTitle(title);
