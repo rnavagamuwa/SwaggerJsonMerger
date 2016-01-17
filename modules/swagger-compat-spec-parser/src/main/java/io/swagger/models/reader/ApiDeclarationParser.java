@@ -23,7 +23,7 @@ public class ApiDeclarationParser extends SwaggerParser {
 
     public ApiDeclaration read(String json, MessageBuilder messages) {
         ObjectMapper mapper = new ObjectMapper();
-        //mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+        mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
         mapper.disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS);
         mapper.setSerializationInclusion(Include.NON_NULL);
 
