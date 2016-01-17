@@ -1,4 +1,4 @@
-package org.wso2jsonMerger;
+package org.wso2jsonmerger;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;

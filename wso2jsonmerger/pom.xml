@@ -9,9 +9,9 @@
 		<version>1.5.7-SNAPSHOT</version>
 	</parent>
 	<groupId>io.swagger</groupId>
-	<artifactId>wso2jsonMerger</artifactId>
+	<artifactId>wso2jsonmerger</artifactId>
 	<version>1.5.7-SNAPSHOT</version>
-	<name>wso2jsonMerger</name>
+	<name>wso2jsonmerger</name>
 	<url>http://maven.apache.org</url>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

@@ -1,4 +1,4 @@
-package org.wso2jsonMerger;
+package org.wso2jsonmerger;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

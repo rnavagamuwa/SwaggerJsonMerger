@@ -295,7 +295,7 @@
 		<module>modules/swagger-compat-spec-parser</module>
 		<!--module>modules/swagger-utils</module -->
 		<!--module>modules/swagger-oauth2-auth-server</module -->
-		<module>modules/wso2jsonMerger</module>
+		<module>wso2jsonmerger</module>
 	</modules>
 	<reporting>
 		<outputDirectory>target/site</outputDirectory>
