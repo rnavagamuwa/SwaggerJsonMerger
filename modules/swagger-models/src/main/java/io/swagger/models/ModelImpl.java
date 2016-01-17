@@ -21,7 +21,7 @@ public class ModelImpl extends AbstractModel {
     private String name;
     private List<String> required;
     private Map<String, Property> properties;
-    private boolean isSimple = false;
+    private transient boolean isSimple = false;
     private String description;
     private Object example;
     private Property additionalProperties;
