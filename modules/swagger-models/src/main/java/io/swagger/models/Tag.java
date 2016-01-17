@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Tag {
-    private final Map<String, Object> vendorExtensions = new HashMap<String, Object>();
+    private transient final Map<String, Object> vendorExtensions = new HashMap<String, Object>();
     private String name;
     private String description;
     private ExternalDocs externalDocs;

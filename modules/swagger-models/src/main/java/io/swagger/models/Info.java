@@ -13,7 +13,7 @@ public class Info {
     private String termsOfService;
     private Contact contact;
     private License license;
-    private Map<String, Object> vendorExtensions = new HashMap<String, Object>();
+    private transient Map<String, Object> vendorExtensions = new HashMap<String, Object>();
 
     public Info version(String version) {
         this.setVersion(version);
