@@ -50,7 +50,7 @@ public class ConfigAndExtensionScannerTest {
         assertEquals(swagger.getExternalDocs().getUrl(), "http://swagger.io");
 
         assertEquals(swagger.getSchemes().size(), 2);
-        assertTrue(swagger.getSchemes().contains(Scheme.HTTP));
+        assertTrue(swagger.getSchemes().contains(Scheme.http));
         assertTrue(swagger.getSchemes().contains(Scheme.HTTPS));
 
         assertEquals(swagger.getTags().size(), 7);

@@ -32,10 +32,10 @@ public class OperationTest {
     @Test
     public void testAddScheme() {
         // when
-        operation.addScheme(Scheme.HTTP);
+        operation.addScheme(Scheme.http);
 
         // then
-        assertTrue(operation.getSchemes().contains(Scheme.HTTP),
+        assertTrue(operation.getSchemes().contains(Scheme.http),
                 "The newly added scheme must be contained in the schemes list");
     }
 

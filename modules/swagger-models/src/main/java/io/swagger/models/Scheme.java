@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public enum Scheme {
-    HTTP("http"),
+    http("http"),
     HTTPS("https"),
     WS("ws"),
     WSS("wss");

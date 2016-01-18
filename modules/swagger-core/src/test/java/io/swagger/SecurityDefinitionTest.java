@@ -45,7 +45,7 @@ public class SecurityDefinitionTest {
         final Swagger swagger = new Swagger()
                 .info(info)
                 .host("petstore.swagger.io")
-                .scheme(Scheme.HTTP)
+                .scheme(Scheme.http)
                 .consumes("application/json")
                 .produces("application/json")
                 .model("Person", personModel)

@@ -29,10 +29,10 @@ public class SwaggerTest {
     @Test
     public void testAddScheme() {
         // when
-        swagger.addScheme(Scheme.HTTP);
+        swagger.addScheme(Scheme.http);
 
         // then
-        assertTrue(swagger.getSchemes().contains(Scheme.HTTP),
+        assertTrue(swagger.getSchemes().contains(Scheme.http),
                 "The newly added scheme must be contained in the schemes list");
     }
 

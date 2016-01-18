@@ -29,8 +29,8 @@ public class ResourceWithSchemeTest {
         Swagger swagger = getSwagger(ResourceWithScheme.class);
         assertEquals(loadSchemes(swagger, "/test/status"), Arrays.asList(Scheme.HTTPS));
         assertEquals(loadSchemes(swagger, "/test/value"), Arrays.asList(Scheme.WS, Scheme.WSS));
-        assertEquals(loadSchemes(swagger, "/test/notes"), Arrays.asList(Scheme.HTTP));
-        assertEquals(loadSchemes(swagger, "/test/description"), Arrays.asList(Scheme.HTTP));
+        assertEquals(loadSchemes(swagger, "/test/notes"), Arrays.asList(Scheme.http));
+        assertEquals(loadSchemes(swagger, "/test/description"), Arrays.asList(Scheme.http));
     }
 
     @Test(description = "scan resource without schemes")

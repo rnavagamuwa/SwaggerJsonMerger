@@ -64,7 +64,7 @@ public class SwaggerSerializerTest {
                 .info(info)
                 .host("petstore.swagger.io")
                 .securityDefinition("api-key", new ApiKeyAuthDefinition("key", In.header))
-                .scheme(Scheme.HTTP)
+                .scheme(Scheme.http)
                 .consumes("application/json")
                 .produces("application/json")
                 .model("Person", personModel)
@@ -144,7 +144,7 @@ public class SwaggerSerializerTest {
                 .info(info)
                 .host("petstore.swagger.io")
                 .securityDefinition("api-key", new ApiKeyAuthDefinition("key", In.header))
-                .scheme(Scheme.HTTP)
+                .scheme(Scheme.http)
                 .consumes("application/json")
                 .produces("application/json")
                 .model("Person", personModel);
