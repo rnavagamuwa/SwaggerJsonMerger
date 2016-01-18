@@ -9,7 +9,7 @@ import java.util.Map;
 
 public abstract class AbstractProperty implements Property {
     String name;
-    String type;
+    transient String type;
     String format;
     String example;
     Xml xml;
