@@ -58,7 +58,7 @@ public class merger {
 
 			try {
 				// write converted json data to a file named "file.json"
-				FileWriter writer = new FileWriter("swagger.json");
+				FileWriter writer = new FileWriter("../Distributions/swagger.json");
 				writer.write(json);
 				writer.close();
 

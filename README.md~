@@ -1,0 +1,1 @@
+This is a simple solution to merge swagger json files. Instead of creating jsons for each APIs this can be used to create a single json for multiple APIs. Host name should be common for all the APIs. This can be simply used in WSO2 API manager.
