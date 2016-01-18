@@ -42,10 +42,10 @@ public class OperationTest {
     @Test
     public void testScheme() {
         // when
-        operation.scheme(Scheme.HTTPS);
+        operation.scheme(Scheme.https);
 
         // then
-        assertTrue(operation.getSchemes().contains(Scheme.HTTPS),
+        assertTrue(operation.getSchemes().contains(Scheme.https),
                 "The newly added scheme must be contained in the schemes list");
     }
 

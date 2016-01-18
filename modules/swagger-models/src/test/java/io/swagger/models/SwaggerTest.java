@@ -39,10 +39,10 @@ public class SwaggerTest {
     @Test
     public void testScheme() {
         // when
-        swagger.scheme(Scheme.HTTPS);
+        swagger.scheme(Scheme.https);
 
         // then
-        assertTrue(swagger.getSchemes().contains(Scheme.HTTPS),
+        assertTrue(swagger.getSchemes().contains(Scheme.https),
                 "The newly added scheme must be contained in the schemes list");
     }
 

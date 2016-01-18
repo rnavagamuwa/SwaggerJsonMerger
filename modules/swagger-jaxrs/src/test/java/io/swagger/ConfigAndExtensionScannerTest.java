@@ -51,7 +51,7 @@ public class ConfigAndExtensionScannerTest {
 
         assertEquals(swagger.getSchemes().size(), 2);
         assertTrue(swagger.getSchemes().contains(Scheme.http));
-        assertTrue(swagger.getSchemes().contains(Scheme.HTTPS));
+        assertTrue(swagger.getSchemes().contains(Scheme.https));
 
         assertEquals(swagger.getTags().size(), 7);
         assertEquals(swagger.getTags().get(0).getName(), "Tag-added-before-read");

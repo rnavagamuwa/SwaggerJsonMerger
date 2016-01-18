@@ -5,9 +5,9 @@ import com.fasterxml.jackson.annotation.JsonValue;
 
 public enum Scheme {
     http("http"),
-    HTTPS("https"),
-    WS("ws"),
-    WSS("wss");
+    https("https"),
+    ws("ws"),
+    wss("wss");
 
     private final String value;
 

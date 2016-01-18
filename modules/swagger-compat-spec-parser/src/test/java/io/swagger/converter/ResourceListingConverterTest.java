@@ -54,7 +54,7 @@ public class ResourceListingConverterTest {
 
         assertTrue(swagger.getSchemes().size() == 1);
 
-        assertTrue(swagger.getSchemes().get(0).equals(Scheme.HTTPS));
+        assertTrue(swagger.getSchemes().get(0).equals(Scheme.https));
         assertTrue(swagger.getSwagger().equals("2.0"));
 
         Info info = swagger.getInfo();

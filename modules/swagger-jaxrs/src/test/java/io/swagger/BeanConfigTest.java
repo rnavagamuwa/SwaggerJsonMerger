@@ -15,7 +15,7 @@ import static org.testng.Assert.assertNotNull;
 
 public class BeanConfigTest {
     private final Set expectedKeys = new HashSet<String>(Arrays.asList("/packageA", "/packageB"));
-    private final Set<Scheme> expectedSchemas = EnumSet.of(Scheme.http, Scheme.HTTPS);
+    private final Set<Scheme> expectedSchemas = EnumSet.of(Scheme.http, Scheme.https);
 
     private BeanConfig createBeanConfig(String rp) {
         BeanConfig bc = new BeanConfig();

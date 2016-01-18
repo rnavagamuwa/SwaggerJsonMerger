@@ -19,7 +19,7 @@ public class SchemesTest extends BaseServletReaderExtensionTest {
         return new Object[][]{
                 {"testMethod1", Collections.singletonList(Scheme.http)},
                 {"testMethod2", Collections.singletonList(Scheme.http)},
-                {"testMethod3", Arrays.asList(Scheme.WS, Scheme.WSS)},
+                {"testMethod3", Arrays.asList(Scheme.ws, Scheme.wss)},
                 {"testMethod4", Collections.singletonList(Scheme.http)},
         };
     }
@@ -29,7 +29,7 @@ public class SchemesTest extends BaseServletReaderExtensionTest {
         return new Object[][]{
                 {"testMethod1", null},
                 {"testMethod2", null},
-                {"testMethod3", Arrays.asList(Scheme.http, Scheme.HTTPS)},
+                {"testMethod3", Arrays.asList(Scheme.http, Scheme.https)},
                 {"testMethod4", null},
         };
     }

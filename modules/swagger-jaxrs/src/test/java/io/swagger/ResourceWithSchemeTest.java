@@ -27,8 +27,8 @@ public class ResourceWithSchemeTest {
     @Test(description = "scan another resource with subresources")
     public void scanResourceWithSubresources() {
         Swagger swagger = getSwagger(ResourceWithScheme.class);
-        assertEquals(loadSchemes(swagger, "/test/status"), Arrays.asList(Scheme.HTTPS));
-        assertEquals(loadSchemes(swagger, "/test/value"), Arrays.asList(Scheme.WS, Scheme.WSS));
+        assertEquals(loadSchemes(swagger, "/test/status"), Arrays.asList(Scheme.https));
+        assertEquals(loadSchemes(swagger, "/test/value"), Arrays.asList(Scheme.ws, Scheme.wss));
         assertEquals(loadSchemes(swagger, "/test/notes"), Arrays.asList(Scheme.http));
         assertEquals(loadSchemes(swagger, "/test/description"), Arrays.asList(Scheme.http));
     }
