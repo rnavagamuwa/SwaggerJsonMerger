@@ -1,4 +1,5 @@
 package org.wso2jsonmerger;
+
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -24,12 +25,16 @@ public class merger {
 			Map<String, Model> definitions = null;
 			Map<String, Model> tempDefinitions;
 			paths = initial.getPaths();
-			definitions = initial.getDefinitions();
-	
+
+			try {
+				definitions = initial.getDefinitions();
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+
 			for (int i = 1; i < swaggerCount; i++) {
 				Swagger temp = new SwaggerParser().read("inputSwagger/" + i + ".json");
 
-				
 				tempPaths = temp.getPaths();
 				for (Entry<String, Path> entryPath : tempPaths.entrySet()) {
 					paths.put(entryPath.getKey(), entryPath.getValue());
