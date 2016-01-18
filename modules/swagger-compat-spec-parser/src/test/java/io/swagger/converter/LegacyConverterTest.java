@@ -71,7 +71,7 @@ public class LegacyConverterTest {
         ApiKeyAuthDefinition apiKey = (ApiKeyAuthDefinition) auth;
 
         assertEquals(apiKey.getName(), "api_key");
-        assertEquals(apiKey.getIn(), In.HEADER);
+        assertEquals(apiKey.getIn(), In.header);
 
 
         assertEquals(swagger.getSwagger(), "2.0");

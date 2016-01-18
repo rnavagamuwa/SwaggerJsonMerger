@@ -12,10 +12,10 @@ public class ApiKeyAuthDefinitionTest {
         final String name = "name";
 
         //when
-        ApiKeyAuthDefinition apiKeyAuthDefinition = new ApiKeyAuthDefinition(name, In.HEADER);
+        ApiKeyAuthDefinition apiKeyAuthDefinition = new ApiKeyAuthDefinition(name, In.header);
 
         //then
         assertEquals(apiKeyAuthDefinition.getName(), name, "The getName() must return the same as the one passed to the constructor");
-        assertEquals(apiKeyAuthDefinition.getIn(), In.HEADER, "The getIn() must return the same as the one passed to the constructor");
+        assertEquals(apiKeyAuthDefinition.getIn(), In.header, "The getIn() must return the same as the one passed to the constructor");
     }
 }

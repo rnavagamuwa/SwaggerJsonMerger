@@ -23,7 +23,7 @@ public class AuthSerializationTest {
     public void testHeaderKeyToJson() throws IOException {
         final ApiKeyAuthDefinition auth = new ApiKeyAuthDefinition()
                 .name("api-key")
-                .in(In.HEADER);
+                .in(In.header);
         final String json = "{\"type\":\"apiKey\",\"name\":\"api-key\",\"in\":\"header\"}";
         SerializationMatchers.assertEqualsToJson(auth, json);
     }
@@ -32,7 +32,7 @@ public class AuthSerializationTest {
     public void testHeaderKeyToYaml() throws IOException {
         final ApiKeyAuthDefinition auth = new ApiKeyAuthDefinition()
                 .name("api-key")
-                .in(In.HEADER);
+                .in(In.header);
         final String yaml = "---\n" +
                 "type: \"apiKey\"\n" +
                 "name: \"api-key\"\n" +

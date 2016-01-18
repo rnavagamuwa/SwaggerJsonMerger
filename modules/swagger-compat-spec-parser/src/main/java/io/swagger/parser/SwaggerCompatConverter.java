@@ -600,7 +600,7 @@ public class SwaggerCompatConverter implements SwaggerParserExtension {
 
                     PassAs passAs = o2.getPassAs();
                     if (PassAs.HEADER.equals(passAs)) {
-                        def.in(In.HEADER);
+                        def.in(In.header);
                     } else {
                         def.in(In.QUERY);
                     }

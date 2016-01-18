@@ -12,18 +12,18 @@ public class InTest {
 
     @Test
     public void testForValue() {
-        assertEquals(In.forValue("header"), In.HEADER, "Must return HEADER  for header");
+        assertEquals(In.forValue("header"), In.header, "Must return HEADER  for header");
         assertNull(In.forValue("unknown"), "Must return null for unknown values");
     }
 
     @Test
     public void testToValue() {
-        assertEquals(In.HEADER.toValue(), "header", "Must return HEADER  for header");
+        assertEquals(In.header.toValue(), "header", "Must return HEADER  for header");
     }
 
     @Test
     public void testValues() {
-        assertEquals(In.valueOf("HEADER"), In.HEADER, "Must return HEADER  for HEADER");
-        assertTrue(Arrays.asList(In.values()).contains(In.HEADER), "Values must contain HEADER");
+        assertEquals(In.valueOf("HEADER"), In.header, "Must return HEADER  for HEADER");
+        assertTrue(Arrays.asList(In.values()).contains(In.header), "Values must contain HEADER");
     }
 }
