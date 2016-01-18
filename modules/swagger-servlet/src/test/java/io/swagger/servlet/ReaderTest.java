@@ -63,7 +63,7 @@ public class ReaderTest {
         Assert.assertNotNull(swagger);
         Assert.assertEquals(swagger.getSwagger(), "2.0");
         Assert.assertEquals(swagger.getTags(), Collections.singletonList(new Tag().name("tests").description("tests")));
-        Assert.assertEquals(swagger.getSchemes(), Arrays.asList(Scheme.HTTP, Scheme.HTTPS));
+        Assert.assertEquals(swagger.getSchemes(), Arrays.asList(Scheme.http, Scheme.HTTPS));
         Assert.assertEquals(swagger.getConsumes(), Arrays.asList("application/json", "application/xml"));
         Assert.assertEquals(swagger.getProduces(), Arrays.asList("application/json", "application/xml"));
     }

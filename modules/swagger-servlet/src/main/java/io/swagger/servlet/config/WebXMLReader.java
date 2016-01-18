@@ -21,7 +21,7 @@ public class WebXMLReader implements SwaggerConfig {
     private final String title;
     private String basePath;
     private String host;
-    private Scheme scheme = Scheme.HTTP;
+    private Scheme scheme = Scheme.http;
 
     public WebXMLReader(ServletConfig servletConfig) {
         apiVersion = getInitParameter(servletConfig, "api.version", "Swagger Server");

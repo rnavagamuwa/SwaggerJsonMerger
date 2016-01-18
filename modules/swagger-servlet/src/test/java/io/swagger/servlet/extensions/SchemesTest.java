@@ -17,10 +17,10 @@ public class SchemesTest extends BaseServletReaderExtensionTest {
     @DataProvider
     private Object[][] resourceWithAnnotations() {
         return new Object[][]{
-                {"testMethod1", Collections.singletonList(Scheme.HTTP)},
-                {"testMethod2", Collections.singletonList(Scheme.HTTP)},
+                {"testMethod1", Collections.singletonList(Scheme.http)},
+                {"testMethod2", Collections.singletonList(Scheme.http)},
                 {"testMethod3", Arrays.asList(Scheme.WS, Scheme.WSS)},
-                {"testMethod4", Collections.singletonList(Scheme.HTTP)},
+                {"testMethod4", Collections.singletonList(Scheme.http)},
         };
     }
 
@@ -29,7 +29,7 @@ public class SchemesTest extends BaseServletReaderExtensionTest {
         return new Object[][]{
                 {"testMethod1", null},
                 {"testMethod2", null},
-                {"testMethod3", Arrays.asList(Scheme.HTTP, Scheme.HTTPS)},
+                {"testMethod3", Arrays.asList(Scheme.http, Scheme.HTTPS)},
                 {"testMethod4", null},
         };
     }
