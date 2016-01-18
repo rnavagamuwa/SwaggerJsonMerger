@@ -25,6 +25,7 @@ public class merger {
 			Map<String, Model> tempDefinitions;
 			paths = initial.getPaths();
 			definitions = initial.getDefinitions();
+	
 			for (int i = 1; i < swaggerCount; i++) {
 				Swagger temp = new SwaggerParser().read("inputSwagger/" + i + ".json");
 
@@ -34,11 +35,15 @@ public class merger {
 					paths.put(entryPath.getKey(), entryPath.getValue());
 				}
 
-				
-				tempDefinitions = temp.getDefinitions();
-				for (Entry<String, Model> entryDef : tempDefinitions.entrySet()) {
-					definitions.put(entryDef.getKey(), entryDef.getValue());
+				try {
+					tempDefinitions = temp.getDefinitions();
+					for (Entry<String, Model> entryDef : tempDefinitions.entrySet()) {
+						definitions.put(entryDef.getKey(), entryDef.getValue());
+					}
+				} catch (Exception e) {
+					// TODO: handle exception
 				}
+
 			}
 
 			initial.setPaths(paths);
