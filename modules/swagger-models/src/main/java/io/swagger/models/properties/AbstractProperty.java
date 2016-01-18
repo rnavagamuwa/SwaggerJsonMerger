@@ -13,7 +13,7 @@ public abstract class AbstractProperty implements Property {
     String format;
     String example;
     Xml xml;
-    boolean required;
+    transient boolean required;
     Integer position;
     String description;
     String title;
