@@ -602,7 +602,7 @@ public class SwaggerCompatConverter implements SwaggerParserExtension {
                     if (PassAs.HEADER.equals(passAs)) {
                         def.in(In.header);
                     } else {
-                        def.in(In.QUERY);
+                        def.in(In.query);
                     }
 
                     def.setName(o2.getKeyname());

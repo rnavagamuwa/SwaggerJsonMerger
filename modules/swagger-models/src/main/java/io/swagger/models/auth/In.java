@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public enum In {
-    header, QUERY;
+    header, query;
 
     private static Map<String, In> names = new HashMap<String, In>();
 
@@ -29,6 +29,6 @@ public enum In {
 
     static {
         names.put("header", header);
-        names.put("query", QUERY);
+        names.put("query", query);
     }
 }
