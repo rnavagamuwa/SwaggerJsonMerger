@@ -130,7 +130,7 @@
 				<version>2.7</version>
 				<configuration>
 					<aggregate>true</aggregate>
-					<source>1.7</source>
+					<source>1.6</source>
 					<encoding>UTF-8</encoding>
 					<maxmemory>1g</maxmemory>
 					<links>
@@ -295,7 +295,7 @@
 		<module>modules/swagger-compat-spec-parser</module>
 		<!--module>modules/swagger-utils</module -->
 		<!--module>modules/swagger-oauth2-auth-server</module -->
-		<module>modules/wso2jsonmerger</module>
+		<module>wso2jsonmerger</module>
 	</modules>
 	<reporting>
 		<outputDirectory>target/site</outputDirectory>
