@@ -10,6 +10,7 @@ import io.swagger.parser.util.SwaggerDeserializationResult;
 import io.swagger.parser.util.SwaggerDeserializer;
 import io.swagger.util.Json;
 import io.swagger.util.Yaml;
+import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.Validate;
 import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
@@ -45,8 +46,8 @@ public class Swagger20Parser implements SwaggerParserExtension {
 			} else {
 				final Path path = Paths.get(location);
 				if (Files.exists(path)) {
-					//data = FileUtils.readFileToString(path.toFile(), "UTF-8");
-					data = readFileToString(path.toFile());
+					data = FileUtils.readFileToString(path.toFile(), "UTF-8");
+					//data = readFileToString(path.toFile());
 				} else {
 					data = ClasspathHelper.loadFileFromClasspath(location);
 				}
@@ -81,8 +82,8 @@ public class Swagger20Parser implements SwaggerParserExtension {
 				}
 				final Path path = Paths.get(location);
 				if (Files.exists(path)) {
-					//data = FileUtils.readFileToString(path.toFile(), "UTF-8");
-					data = readFileToString(path.toFile());
+					data = FileUtils.readFileToString(path.toFile(), "UTF-8");
+					//data = readFileToString(path.toFile());
 				} else {
 					data = ClasspathHelper.loadFileFromClasspath(location);
 				}

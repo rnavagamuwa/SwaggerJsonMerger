@@ -71,11 +71,6 @@
 			<version>${slf4j-version}</version>
 		</dependency>
 		<dependency>
-			<groupId>commons-io</groupId>
-			<artifactId>commons-io</artifactId>
-			<version>2.4</version>
-		</dependency>
-		<dependency>
 			<groupId>com.github.tomakehurst</groupId>
 			<artifactId>wiremock</artifactId>
 			<version>1.58</version>
@@ -91,5 +86,10 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
+		<!--<dependency>-->
+			<!--<groupId>commons-io</groupId>-->
+			<!--<artifactId>commons-io</artifactId>-->
+			<!--<version>2.3</version>-->
+		<!--</dependency>-->
 	</dependencies>
 </project>
