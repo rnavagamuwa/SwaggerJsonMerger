@@ -47,7 +47,6 @@ public class Swagger20Parser implements SwaggerParserExtension {
 				final Path path = Paths.get(location);
 				if (Files.exists(path)) {
 					data = FileUtils.readFileToString(path.toFile(), "UTF-8");
-					//data = readFileToString(path.toFile());
 				} else {
 					data = ClasspathHelper.loadFileFromClasspath(location);
 				}
@@ -83,7 +82,6 @@ public class Swagger20Parser implements SwaggerParserExtension {
 				final Path path = Paths.get(location);
 				if (Files.exists(path)) {
 					data = FileUtils.readFileToString(path.toFile(), "UTF-8");
-					//data = readFileToString(path.toFile());
 				} else {
 					data = ClasspathHelper.loadFileFromClasspath(location);
 				}
@@ -147,22 +145,5 @@ public class Swagger20Parser implements SwaggerParserExtension {
 
 		return Json.mapper().convertValue(node, Swagger.class);
 	}
-
-	private String readFileToString(File file) throws IOException {
-		BufferedReader br = new BufferedReader(new FileReader(file));
-		try {
-			StringBuilder sb = new StringBuilder();
-			String line = br.readLine();
-
-			while (line != null) {
-				sb.append(line);
-				sb.append("\n");
-				line = br.readLine();
-			}
-			return sb.toString();
-		} finally {
-			br.close();
-		}
-
-	}
+	
 }
