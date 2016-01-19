@@ -74,7 +74,6 @@ public class merger {
     private static void getCount(String dirPath) {
         File f = new File(dirPath);
         File[] files = f.listFiles();
-        System.out.println(new File(dirPath).toURI().toString());
         if (files != null)
             for (int i = 0; i < files.length; i++) {
                 swaggerCount++;
