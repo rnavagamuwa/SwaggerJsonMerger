@@ -1,0 +1,1 @@
+java -cp /home/randika/Documents/SwaggerJsonMerger/modules/wso2jsonmerger/target/wso2jsonmerger-1.5.7-SNAPSHOT.jar org.wso2jsonmerger.App
