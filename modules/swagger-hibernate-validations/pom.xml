@@ -87,7 +87,7 @@
         </dependency>
     </dependencies>
     <properties>
-        <hibernate-validator-version>5.1.3.Final</hibernate-validator-version>
+        <hibernate-validator-version>5.3.5.Final</hibernate-validator-version>
         <!-- TODO increase coverage and remove these overrides-->
         <coverage.complexity.minimum>0.50</coverage.complexity.minimum>
         <coverage.line.minimum>0.90</coverage.line.minimum>
